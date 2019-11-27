@@ -4,7 +4,8 @@
   "description": "csscomb for .vue file",
   "main": "vcsscomb.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vcsscomb": "./vcsscomb.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
     "url": "https://github.com/sanguneo/vcsscomb/issues"
   },
   "homepage": "https://github.com/sanguneo/vcsscomb#readme",
+  "bin": {
+    "rns": "./vcsscomb.js"
+  },
   "dependencies": {
     "csscomb": "^4.3.0"
   }
