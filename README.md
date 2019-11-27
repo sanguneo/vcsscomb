@@ -1,6 +1,7 @@
 # vcsscomb
-csscomb adaptor for .vue file
 
-use vcsscomb option (arguments) as csscomb.
+csscomb adapter for .vue files
+
+Use the csscomb option for vcsscomb.
 
 vcsscomb --config $configFilePath$ $vueFilePath.vue$
