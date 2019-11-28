@@ -1,6 +1,6 @@
 {
   "name": "vcsscomb",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "csscomb for .vue file",
   "main": "vcsscomb.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/sanguneo/vcsscomb#readme",
   "bin": {
-    "rns": "./vcsscomb.js"
+    "vcsscomb": "./vcsscomb.js"
   },
   "dependencies": {
     "csscomb": "^4.3.0"

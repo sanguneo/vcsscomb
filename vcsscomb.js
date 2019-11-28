@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const csscomb = require('csscomb');
 
@@ -5,11 +7,11 @@ const args = process.argv.slice(2);
 const targetVueFilePath = args[args.length - 1];
 
 const configArgIndex = args.indexOf('--config');
-const comb = new csscomb((configArgIndex !== -1 ) ? args[configArgIndex + 1] : 'csscomb');
+const comb = new csscomb((configArgIndex !== -1 ) ? JSON.parse(fs.readFileSync(args[configArgIndex + 1])) : 'csscomb');
 
 const content = fs.readFileSync(targetVueFilePath).toString();
 
-const regExr = /(<style ?(?:lang="(.*)")?>)(.*)?(<\/style>)/gms;
+const regExr = /(<style ?(?:scoped)?(?:lang="(.*)")? ?(?:scoped)?>)(.*)?(<\/style>)/gms;
 const main = async () => {
     const regResult = regExr.exec(content);
     if (!regResult) {
